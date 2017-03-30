@@ -1,0 +1,15 @@
+
+
+ask for runners every 5k
+figure out where I am off in each segment
+get runners at time=t-10
+    increase/decrease their speed by some arbitrary amount
+        fire them away for 10 minutes
+        see if WRONG decreases
+        while it decreases (no more than 5 times)
+            increase/decrease their speed by 1%
+            calculate the difference
+        
+        when done 
+            move people as you see fit to adjust for the 5k data 
+

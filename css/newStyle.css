@@ -1,0 +1,641 @@
+		body{
+			margin:0;
+			padding: 0;
+			font-family: 'Lato', sans-serif;
+    	overflow:hidden;
+		}
+		
+		h1, h2, h3, h4, h5 {
+			text-align: center;
+			margin: 0;
+			margin-top: 2%;
+		}
+		
+		div {
+			display: inline-block;
+		}
+
+		.gray {
+			background-color: gray;
+}
+
+		#header{
+			width: 100%;
+			height: 10%;
+			color: white;
+		}
+		
+	 #header.yellow{
+			background-color: #fff600;
+			color: black;
+		}
+
+		#alertbar{
+			width: 100%;
+			padding-top: 0.5%;
+			height: 4%;
+			background: white;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+			z-index: 100;
+			text-align: center;
+			font-weight: 900;
+
+		}
+		
+		#timingDiv {
+			float: right;
+			width: 47%;
+			height: 100%;
+			text-align: right;
+			font-size: .75em;
+		}
+		
+		#timingDiv p {
+			margin-bottom: 0;
+			margin-top: 4px;
+		}
+		
+		
+		
+		#clockTime{
+			display: inline-block;
+			margin-right: 10%;
+			line-height: 1.8;
+		}
+		
+		#raceTime{
+			display: inline-block;
+			margin-right: 10%;
+			line-height: 1.8;
+		}
+
+		.content{
+			width: 100%;
+			height: 85%;
+			background: #e6e9ec;
+		}
+
+		#map{
+			width: 39%;
+			height: 100%;
+		}
+
+		#sidebar{
+			width: 52%;
+			height: 100%;
+			float: right;
+		}
+
+		#col1{
+			width: 49.5%;
+		}
+
+		#col2{
+			width: 49.5%;
+			float: right;
+		}
+		
+		  svg text {
+		    font-family: "Lato", Arial, sans-serif;
+		  }
+
+		.module{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+			background: white;
+			margin: 5%;
+		}
+
+		#medical{
+			padding-left: 1%;
+			height: 55%;
+			width: 90%;
+		}
+		
+		#legend{
+			height:10%;
+			width: 90%;
+		}
+
+		#densityplotWrap{
+			height: 45%;
+			width: 90%;
+		}
+		
+		#mod1{
+			height: 20%;
+			width: 90%;
+		}
+
+		#mod3{
+			height: 31.5%;
+			width: 90%;
+		}
+		
+		#mod2{
+			height: 40%;
+			width: 90%;
+		}
+
+		#mod4{
+			height: 20%;
+			width: 90%;
+		}
+
+		#logos{
+			padding-top: 1%;
+			width: 50%;
+			height: 100%;
+		}
+		
+		#NUlogo {
+		  margin-left: 5%;
+		  height: 100%;
+		  width: 20%;
+		  margin-top: 0%;
+    	background-repeat: no-repeat;
+    	background-size: 100%;
+		}
+		  
+		#NUlogo.white {
+		  background-image: url("../img/NU_logo_white.png");
+		}
+		  
+		#NUlogo.purple {
+		 	background-image: url("../img/NU_logo_purple.png");
+		 	background-color: transparent;
+		}
+		  
+		 #MarathonName {
+			    
+			 margin-left: 3%;
+			 height: 100%;
+			 width: 20%;
+			 background-size: 100%;
+			 background-repeat: no-repeat;
+			 background-color: transparent;
+		}
+			  
+		#MarathonName.white {
+			 background-image: url("../img/shamrockLogoWhite.png");
+		}
+		#MarathonName.black{
+			 background-image: url("../img/shamrockLogoColor.png");
+		}
+
+
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+  }
+  
+  .axis text {
+    font-size: 1.15vw;
+  }
+  
+  .grid .tick {
+    stroke: gray;
+    opacity: 0.7;
+    display: none;
+  }
+  
+  .grid path {
+    stroke-width: 0;
+  }
+  
+  rect {
+    rx: 3;
+    ry: 3;
+  }
+  
+  rect:hover {
+    fill: orange;
+  }
+  
+   #AidStationTitle {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5%;
+    height: 10%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  .green {
+  	background-color: green;
+  }
+  
+  .yellow{
+  	background-color: yellow;
+  	color: black;
+  }
+  
+    .orange{
+  	background-color: orange;
+  }
+  
+  .red {
+  	background-color: rgb(150, 10, 10);
+  }
+  
+  .black{
+  	background-color: black;
+  }
+  
+  
+  
+  
+  
+  
+  
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+.status {
+  position: absolute;
+  left: 55%;
+}
+
+.weather {
+	width: 20%;
+	height: 100%;
+}
+
+
+
+
+  #tooltip {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+    pointer-events: none;
+  }
+  
+  #tooltip.hidden {
+    display: none;
+  }
+  
+  #tooltip p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+
+/*
+  Docs at http://http://simpleweatherjs.com
+
+  Look inspired by http://www.degreees.com/
+  Used for demo purposes.
+
+  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
+
+  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
+*/
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+  text-transform: none;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(0,0,0,0.01);
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
+#weather {
+			height: 100%;
+			width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#weather h2{
+	font-size: 1.1em;
+}
+
+
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+  text-transform: none;
+}
+
+
+
+
+      rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Lato, Helvetica, sans-serif;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #ffffff;
+      }
+
+
+h3{
+	font-size: 200%;
+}
+
+#info {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 10;
+  right: 20;
+}
+#info {
+  z-index: 10;
+}
+
+#info p{
+	font-family: Lato, Helvetica, sans-serif;
+	color:white;
+	text-align: right;
+	margin-bottom: 1%;
+	line-height: 1;
+	font-size: 125%;
+}
+
+#runners_box{
+	margin-bottom: 3%;
+	line-height: 0.7;
+}
+
+#runners_box_left{
+	text-align: left;
+	float: left;
+	width: 30%;
+	height: 100%;
+	padding-left:10%;
+	padding-top: 1px;
+}
+
+#runners_box_right{
+	float: right;
+	width: 45%;
+	padding-left: 5%;
+	padding-top: 1px;
+}
+
+#runners_box p{
+	font-family: Lato, Helvetica, sans-serif;
+	color:black;
+	font-size: 1em;
+}
+
+#RunnersOnCourse{
+	margin-left:3%;
+	border-top: 1px solid white;
+}
+#chart{
+	display: inline-block;
+	float: right;
+	width: 20%;
+	height: 90%;
+}
+
+#aidStations{
+	display: inline-block;
+	margin-left: 5%;
+	width: 70%;
+	height: 80%;
+	margin-bottom: 30px;
+}
+
+#stress-chart{
+	float: right;
+	display: inline-block;
+	width: 20%;
+	height: 90%;
+}
+
+#chart2{
+	width: 100%;
+	height: 30%;
+}
+
+#map_legend {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  z-index: 30;
+  color: black;
+}
+
+#map_legend {
+	font-family: Lato, Helvetica, sans-serif;
+	color:black;
+	font-size: 0.85em;
+	text-align: right;
+}
+
+#runner_legend{
+	margin-top: 35%;
+	margin-left: 5%;
+	margin-right: 0%;
+	width: 25%;
+	float: left;
+}
+
+#marker_legend{
+	width: 45%;
+	margin-top: 35%;
+	margin-right: 20%;
+	float: right;
+}
+
+#map_legend h5{
+	text-align: right;
+	border-radius: 5px;
+	float: right;
+}
+
+#map_legend .boxes {
+	margin-top: 5px;
+	margin-left: 5px;
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	text-align: right;
+	border-radius: 5px;
+	
+}
+
+h4{
+	font-size: 170%;
+}
+
+  .icon-dc {
+    background: rgba(58, 153, 222, 0.9);
+    color: white;
+  }
+  
+   .icon-sf {
+    background: rgba(58, 153, 222, 0.9);
+    color: white;
+  }
+  
+  .dimple-custom-axis-title{
+  	display: none;
+  }
+
+
+#map_legend .circles{
+margin-top: 0px;
+margin-left: 5px;
+position: absolute;
+width: 20px;
+height: 20px;
+text-align: right;
+border-radius: 100%;
+}
+
+
+.purple{
+background-color: purple;
+}
+
+.cream{
+	background-color: #FCFBE3;
+}
+

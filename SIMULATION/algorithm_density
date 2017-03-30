@@ -1,0 +1,105 @@
+notes - meeting 
+
+composition of runners - age, gender, country, corral?
+
+
+29th - simulation
+
+
+-------------------------------
+
+=++++++
+    ask for temperature to start 
+    generate with n = # of runners 
+        assign them to corrals, std_dev, speed function, etc 
+        assign start times sorted by speed (fast people go first)
+        keep multi-dimensional array for every minute
+            each entry is a runner, that has:
+                - position
+                - speed function given position 
+                - start time (minute from 7:30) 
+                - corral assignment
+                - started? 
+                - finished?
+                
+    save it all in a file/db
+        
+        run as: python SimulateMarathon ARGS
+            args:
+                1. minute to start simulation from (a fetch from db)
+                2. 1/0 for loading the values or inputing new values
+                
+            if minute<0 or minute>500
+                cannot do this
+            if arg2==0
+                load values: ask for display of miles or km information
+                    if 'm' -> miles
+                    if 'k' -> km 
+                    if 'q' -> QUIT
+            if arg2==1
+                input new information  
+                    load from db and show: minute, and data each 5k 
+                    ask for 5k cumulative data as input 
+                    verify that it's correct (ask to put again or simply ask for verification)
+                    calculate how wrong our simulation is 
+                        if minute>60 -> everyone should have started 
+                            if participants(on course + finished) < active_participants (simulation)
+                                #do something to 'eliminate' the extra people from the simulation 
+                        calculate offsets of data 
+                            example of data, people in segments
+                                real:   100     130     160     200     10
+                                sim :   90      120     180     190     20
+                                diff:   -10     -10     +20     -10     +10 --> 0
+                                ========
+                                        +10     +10     -20     +10     -10
+                                what we should be doing:
+                                    sum should add up to 0, if not... deal with that first (delete from the slowest? or random?)
+                                    going for segment i, i=0->n 
+                                        figure out if you're missing or have extra 
+                                            sum all the differences from i+1 to n 
+                                                if sum>0
+                                                    need people back in your segment 
+                                                    retrieve SUM people from the segment in front of you 
+                                                if sum<0
+                                                    need to push some people (+) forward from your segment 
+                                                    push SUM people from your segment to the one in front of you 
+                                                if sum==0
+                                                    you're good. do nothing
+                                                    continue to next n
+                                    ---
+                        @@ now we have the current positions
+                            for the next 30 minutes
+                                calculate the next 30 minutes
+                                overwrite the existing database with the next 30 minutes of simulation
+                                
+                    provide some feedback of what changed
+                    ask if ok with changes?
+                        if yes, make changes in database
+    terminate program
+                                        
+                                            
+                                
+    database structure
+        40,000 runners, 500 minutes, 6 variables
+            (100,000,000 total entries?)
+            trying to calculate and modify:
+                240,000 per minute
+                7.5 million for 30 minutes
+                
+                
+        reduce this load
+            do every 5 minutes -> 1/5 the number of operations
+            bundle in groups of 5 runners -> 1/5 number of operations
+            total --> 1/25 workload
+                approximately same 
+                unit of measurement will be 5 -> about 0.012% of the entire marathon, roughly .2% of error on our estimation
+                
+            25x less operations
+                about 10,000 operations each minute 
+                only 300,000 for next 30 minutes 
+                
+            bundling every 10 people could make it 5k per minute of simulation 
+            
+                
+                
+        

@@ -1,0 +1,32 @@
+THOUGHTS ON DATABASE
+
+
+1. Need to output csv files from the database
+2. Need to be able to input into the database
+
+
+** All php database queries / or python will retrieve directly from the LAST element in the database
+UNLESS DOING TIME SERIES STUFF - not yet
+
+DASHBOARD - only display information directly from .csv files
+
+CHANGE_INFO
+    MEDICAL
+        Has a box for each field and you can update by clicking up/down or writing the number
+        Retrieves directly from database
+        You can change through javascript to add/delete things
+        
+        Click 'update' will immediately change db information by ADDING new field
+        
+    RUNNERS
+        Same as the medical website. asks info and saves on database
+        
+        
+        
+        
+        
+** SEE IF CAN WRITE TO FILE, OTHERWISE, USE PYTHON FOR NOW
+
+
+        
+        

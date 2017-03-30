@@ -1,0 +1,61 @@
+CREATE TABLE AidStations (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    timeUpdate TIME,
+    StationType VARCHAR(30) NOT NULL,
+    Location VARCHAR(30) NOT NULL,
+    Comments VARCHAR(30) NOT NULL,
+    CurrentPatients INT,
+    CumulativePatients INT,
+    Beds INT,
+    Latitude DOUBLE,
+    Longitude DOUBLE,
+    Km FLOAT,
+    Status INT
+);
+
+CREATE TABLE RunnerData (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    time TIME,
+    start INT,
+    at5k INT,
+    at10k INT,
+    at15k INT,
+    at20k INT,
+    at25k INT,
+    at30k INT,
+    at35k INT,
+    at40k INT,
+    finish INT,
+    OnCourse INT
+);
+    
+    
+-- figure out Aid Station passing per minute
+AS Miles:
+    1 - 2.6
+    2 - 5.2
+    3 - 8.1
+    
+select count(*) from ( (SELECT runnerId as r1, position as pos1d from MarathonRunners where minute=10) pos1 ) join (SELECT runnerId as r2, position as pos2d from MarathonRunners where minute=12 ) pos2)) p where r1=r2 and pos1.position<2.6 and pos2.position>2.6;
+
+select count(*) from (MarathonRunners t1 LEFT JOIN MarathonRunners t2 on t1.runnerId=t2.runnerId); 
+
+select count(*) from ( (select t1.runnerId from MarathonRunners as t1 where position<2.6 and minute=10) INTERSECT (select t2.runnerId from MarathonRunners as t2 where position<2.6 and minute=12)) t ;
+
+select 
+    (select count(*) from (select * from MarathonRunners where position<2.6 and minute=10) t0) -
+    (select count(*) from (select * from MarathonRunners where position<2.6 and minute=12) t1) 
+t2;
+
+
+SELECT t1.value from (
+  (SELECT DISTINCT value FROM table_a)
+  UNION ALL 
+  (SELECT DISTINCT value FROM table_b)
+) AS t1 GROUP BY value HAVING count(*) >= 2;
+
+select count(*) from (
+    (SELECT DISTINCT a1.runnerId from MarathonRunners as a1)
+    UNION ALL
+    (SELECT DISTINCT a2.runnerId from MarathonRunners AS a2)
+) AS t1 GROUP BY runnerId HAVING count(*) >= 2;

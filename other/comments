@@ -1,0 +1,110 @@
+
+
+at 11:45 in real time: we have 20,000 people passed 10k
+
+in 2014, at 11:40 we had 20,000 people passed 10k
+
+so set offset to -5
+    from now on, display the 2014 number from t-5 minutes
+    
+
+*assuming everyone runs at the same pace
+
+
+/// get:
+    at any time, number of people within a mile marker
+    
+    
+    
+    then
+    at any time, number of people that have passed each 5k mark (to compare later with real-time data)
+    
+    
+    
+    ----------------------------
+ideally:
+    for temperature: have as an input, and 
+    
+---------------------------------------------
+-----------------------------------------------
+Density
+    - Have simulation based on temperature
+        - maybe extract from database:
+            database: 
+                have table:
+                    - minute
+                    - density (temp) at different points
+                    - offset for each 
+                    
+    -or 
+        database: has all the inputs 
+        have also formulas for each 
+        
+        get: 
+            5k segments expected with the 
+
+***
+    store in a table the stuff we need (distributions, slopes) ? (maybe vars in javascript)
+    Every time we get an input:
+        get minute of the race
+        calculate all runners and where they are based on temperature and corral
+        get some measure of density per mile 
+        extract from database (offsets) the offset for the last number 
+        modify density based off this offset 
+            those who were in an interval [5k] where offset is <0, slow down 
+            those who were in an interval [5k] where offset is >0, speed up 
+        
+        calculate the 5k interval approximation
+        
+        read inputs of 5k intervals from file or terminal or something 
+        figure out what groups are slow and what groups are fast
+        
+        
+-----------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Use the simulation - improve maybe on corrals and other stuff to make simulation better
+
+    + generate every minute 
+    + Runner has:
+        corral
+        speed 
+        stdDev
+        slope 
+        position 
+        
+    Option
+        decrease 1 minute / increase 1 minute (or 2,3,5,10)
+            modify simulation by that 1 minute
+        Input new data for 5k
+            Ask user for data from runners for every 5k 
+            Ask for confirmation
+            Perform modification to the simulation as follows:
+                calculate how many are in each segment in the simulation
+                calculate how many are in each segment in real-time
+                
+                for every consecutive segment pair
+                    calculate the discrepancy
+                    put the discrepancy at the line between segments
+                        assign the closest runners on the side of the discrepancy to the corresponding position multiple of 5k  
+                        let them run again
+            
+            store that simulation
+            store new data of each runner 
+            
+            create density graph to display on map? 
+                --this could also happen with a refresh or every minute?
+        quit 
+        
+        RUN THE MODEL
+            simulateDensity.py
+                ARGUMENTS:
+                    minute of the race at which the simulation begins
+                    
+            will retrieve the status of the race as of the minute mentioned
+                directly from the database
+            
+                

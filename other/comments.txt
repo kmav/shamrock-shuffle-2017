@@ -1,0 +1,28 @@
+Have name of lead runner - both female and male
+	where to get it from?
+
+white
+	having info about race, quick notifications (to watch)
+
+red
+	having more medical information
+
+Tracking runners
+	tracking lead men/women
+	get the live feed of the leads!!!! --> check if possible
+	also the bell curve?
+
+putting gps on pacers to show the map!
+	to know what's the most interesting
+
+--
+	finding a good way to predict the number of runners between each aid station
+	++ how often do we get data of each 5k interval?????
+
+---
+* change numbers to slightly more realistic
+
+
+NOTES FROM 7/16
+Fix dynamic textbox for General Info 
+Alert Bar slightly wider than Top Banner

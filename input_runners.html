@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta charset=utf-8 />
+    </head>
+    <style>
+        
+    .blockInput {
+        width: 95px;
+        height: 50px;
+        border: 1px solid black;
+        float: left;
+        position: relative;
+    }
+    input{
+        width: 75%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .inputTxt{
+        width: 100%;
+        text-align: center;
+    }
+        
+    #inputRunners{
+        width: 500px;
+    }
+    #inputRunnersTitle{
+        width:500px;
+        text-align: center;
+    }
+    
+        
+    </style>
+    <body>
+        <div id='inputRunnersTitle' >
+            Runner data input form
+        </div>
+        <form id='inputRunners' action='updateRunners.php' method='POST'>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    Started
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='start' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    5k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at5k' required>
+                </div>
+            </div>
+
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    10k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at10k' required>
+                </div>
+            </div>
+
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    15k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at15k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    20k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at20k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    25k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at25k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    30k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at30k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    35k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at35k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    40k
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='at40k' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <div class='inputTxt'>
+                    Finished
+                </div>
+                <div class='inputNumber'>
+                    <input type='number' name='finished' required>
+                </div>
+            </div>
+            
+            <div class='blockInput'>
+                <input type='submit' name='submit' value='Update' >
+            </div>
+            
+        </form>
+         
+        
+    </body>
+    
+    
+    
+    
+    
+    
+        
+</html>
