@@ -1,9 +1,9 @@
 Type,Location,Comments,CurrentPatients,CumulativePatients,Beds,Latitude,Longitude,Km,Status,Display
-MT,GenA,Open,1,0,4,41.873223,-87.620579,24,0,0
+MT,GenA,Open,2,0,4,41.873223,-87.620579,24,0,0
 MT,GenB,Open,1,0,4,41.873223,-87.620579,24,0,0
 MT,Podiatry,Closed,2,0,5,41.873223,-87.620579,2,0,0
 MT,ICU,Closed,1,0,4,41.873223,-87.620579,1,0,0
-AS,1,Open,0,0,6,41.883886,-87.627871,1,0,0
+AS,1,Open,2,4,6,41.883886,-87.627871,1,0,0
 AS,2,Open,0,0,6,41.87469,-87.63361,2,0,0
 MT,DUMMY,CLOSED,0,0,5,0,0,0,0,1
 MT,DUMMY,CLOSED,0,0,5,0,0,0,0,1

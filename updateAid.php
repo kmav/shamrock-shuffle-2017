@@ -56,13 +56,16 @@ include('php/isMobile.php');
 
         //get the values passed to me from the form input_medical.php
         $counter = 1;
+        $ASCounter = 1;
         foreach($AidStations as &$station){
             //now check and/or change as needed
             if ($station["Type"]=="AS"){
                 //echo "<br>$$$$".$counter."$$$$$<br>";
                 //echo $_POST["AS_Current".$counter];
                 //echo $_POST["AS_Cumulative".$counter];
-                $station["CurrentPatients"] = (int)$_POST["AS_Current".$counter];
+
+                $station["CurrentPatients"] = (int)$_POST["AS_Current".$ASCounter];
+            
                 // echo $str;
                 // echo "%%%%%";
                 // echo $_POST[$str];
@@ -70,12 +73,12 @@ include('php/isMobile.php');
                 //     $station["CumulativePatients"] =  (int)$_POST["AS_Cumulative".$counter];
                 // }
                 
-                $station["CumulativePatients"] = (int)$_POST["AS_Cumulative".$counter];
+                $station["CumulativePatients"] = (int)$_POST["AS_Cumulative".$ASCounter];
                 
                 //add status updates!!! (from buttons or something like that)
-                $str = "AS_status".$counter;
+                $str = "AS_status".$AScounter;
                 $station["Status"] = (int)$_POST[$str];
-                $str = "AS_Display".$counter;      
+                $str = "AS_Display".$AScounter;      
                 //echo "<br>";
                 //echo $str;
                 $station["Display"] = $_POST[$str];
@@ -84,6 +87,10 @@ include('php/isMobile.php');
                 }
                 else{
                     $station["Display"]=0;
+                }
+                
+                if ($ASCounter == 1){
+                    $ASCounter += 1;
                 }
                 //echo $station["Display"];
                 //echo "<br>";
