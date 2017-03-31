@@ -289,7 +289,7 @@ def main():
 
         print "operations: ",operations
     
-    file = open('DensitiesFull.csv','w')
+    file = open('Densities.csv','w')
 
     file.write("raceMinute,started,atMile0,atMile1,atMile2,atMile3,atMile4,atMile5,atMile6,atMile7,atMile8,atMile9,atMile10,atMile11,atMile12,atMile13,atMile14,atMile15,atMile16,atMile17,atMile18,atMile19,atMile20,atMile21,atMile22,atMile23,atMile24,atMile25,atMile26,finished,drops\n")
     for minute in range(0,totalMinutes,minuteInterval):
@@ -303,7 +303,7 @@ def main():
     print totalDropped
         
 
-ratio_grouped = 10
+ratio_grouped = 1
 minuteInterval = 2
 currentTemp = 60
 if __name__=='__main__':

@@ -395,10 +395,10 @@ if (shelterGP==1){
 
 }
 
-d3.csv("SIMULATION/DensitiesFull.csv",getRunners);
+d3.csv("SIMULATION/Densities.csv",getRunners);
 d3.csv("data/gen_info.csv",displayInfo);
 
 // 2017 runner drop update
-d3.csv("SIMULATION/DensitiesFull.csv",displayDrops);
+d3.csv("SIMULATION/Densities.csv",displayDrops);
 
 //may make new general info file with runners on course, runners finished, hospital transports, and patients seen

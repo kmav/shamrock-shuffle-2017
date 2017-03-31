@@ -48,7 +48,7 @@ if(isset($_SESSION['login_user']))
 <label>Repeat Password:</label>
 <input id="password2" name="password2" placeholder="password" type="password">
 <br><br>
-<label>Finally, tell us a little bit about where you will be during the Chicago Marathon</label>
+<label>Finally, tell us a little bit about where you will be during the Shamrock Shuffle</label>
 <br><br>
 I will be stationed at  : <select  name="station">
   <option value="AS">Aid Stations</option>

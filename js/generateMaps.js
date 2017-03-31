@@ -39,7 +39,7 @@ function generateLines() {
     pathsLayer.clearLayers();
     returnArray = [];
     
-    var runnerData = d3.csv('SIMULATION/DensitiesFull.csv', function(error, data) {
+    var runnerData = d3.csv('SIMULATION/Densities.csv', function(error, data) {
 
         var minute = getMinute();
         //("Minute: " + minute);

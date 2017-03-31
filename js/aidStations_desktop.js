@@ -163,7 +163,12 @@ function drawAidStationTents(data){
 				})
 				.attr("y",function(d,i){
 					// (h));
-					return (yScale(i));
+					var asNumber = 0;
+					if (d.Location == '1'){
+						asNumber = 1;
+					}
+					
+					return (yScale(asNumber));
 					//return h-p-yScale(+d.CurrentPatients);
 				})
 				.attr("width",function(d){

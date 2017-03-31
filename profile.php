@@ -31,7 +31,7 @@
         }
     
     ?>
-    <h3>Click on your browser's back button or on the Chicago Marathon logo at the top left of the displays to come back to this page. Feel free to email comments, complaints, and questions to marathondvs@gmail.com </h3>
+    <h3>Click on your browser's back button or on the Shamrock Shuffle logo at the top left of the displays to come back to this page. Feel free to email comments, complaints, and questions to marathondvs@gmail.com </h3>
     
     <?php
        /* if ($mobile){
@@ -39,7 +39,7 @@
         } 
         */
         //check for mobile version and put the appropriate links
-        if ($level_session==2){
+        if ($level_session==2 || $level_session==1){
          //   $mobile = true;
         //}
         //if ($mobile==true){
@@ -49,18 +49,8 @@
             echo "<a href='instructions.php'><div class='pagelink'>Instruction Page</div></a>";
             //echo "<a href='AllMedCheckIn.php'><div class='pagelink'>Medical Staffing</div></a>";
         }
-        else if ($level_session == 1){
-           // echo "<a href='desktop.php'><div class='pagelink'>Main Display</div></a>";
-            //echo "<a href='AllMedCheckIn.php'><div class='pagelink'>Medical Staffing</div></a>";
-           // echo "<a href='instructions.php'><div class='pagelink'>Instruction Page</div></a>";
-
-            //echo "<a href='command.php'><div class='pagelink'>Forward Command Display </div></a>";
-            //cho "<a href='getMobile.php'><div class='pagelink'>Mobile Version</div></a>";
-
-        }
-        
         //check for authorization to input_medical and input_geninfo.php
-        if ($level_session<=0){
+        else if ($level_session<=0){
             echo "<a href='desktop.php'><div class='pagelink'>Main Display</div></a>";
             //echo "<a href='AllMedCheckIn.php'><div class='pagelink'>Medical Staffing</div></a>";
             echo "<a href='instructions.php'><div class='pagelink'>Instruction Page</div></a>";
@@ -69,9 +59,6 @@
             echo "<a href='input_medical.php'><div class='pagelink'>Medical Input</div></a>";
             echo " <a href='input_geninfo.php'><div class='pagelink'>General Input</div></a>";
             echo "<a href='inputStress.php'><div class='pagelink'>Stress Level Input</div></a>";
-        }
-        else {
-           // echo "<span>If you believe you are authorized to access other pages, please contact bpeynetti@u.northwestern.edu </span>";
         }
         
         $admin = "rsquared11";

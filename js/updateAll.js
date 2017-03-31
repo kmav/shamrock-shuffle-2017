@@ -7,7 +7,7 @@ var AidStations = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 var timeMultiplier = 1;
 var yScaleBoth = 0;
 
-var SetHour = 17;
+var SetHour = 13;
 var SetMinute = 0;
 var SetSecond = 0;
 
