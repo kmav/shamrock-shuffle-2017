@@ -155,10 +155,10 @@ if ($_SESSION['start'] + (10*60*60) < time()) {
 								<div id="runner_legend">
 									<p> <b>Runners:</b> </p>
 									<p>Opened <span class="boxes gray"></span></p>
-							        <p>0-2000 <span class="boxes green"></span></p>
-							        <p >2000-4000 <span class="boxes yellow"> </p>
-							        <p>4000-6000 <span class="boxes orange"> </p>
-							        <p>6000+ <span class="boxes red"> </p>
+							        <p>0-1500 <span class="boxes green"></span></p>
+							        <p >1500-3000 <span class="boxes yellow"> </p>
+							        <p>3000-4500 <span class="boxes orange"> </p>
+							        <p>4500+ <span class="boxes red"> </p>
 							    </div>
 							    
 							    <div id="marker_legend">

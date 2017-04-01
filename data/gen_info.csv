@@ -1,2 +1,2 @@
 Time,AlertStatus,temperature,windSpeed,windDirection,humidity,runnersStarted,runnersOnCourse,runnersFinished,hospitalTransports,patientsSeen,LeadMaleLat,LeadMaleLong,LeadFemaleLat,LeadFemaleLong,TurtleLat,TurtleLong,LeadWheelchairMaleLat,LeadWheelchairMaleLong,LeadWheelchairFemaleLat,LeadWheelchairFemaleLong,FinalWheelchairLat,FinalWheelchairLong,pace350Lat,pace350Long,pace355Lat,pace355Long,pace425Lat,pace425Long,pace430Lat,pace430Long,pace500Lat,pace500Long,pace510Lat,pace510Long,Alert,emergencyCheck,AlertLat,AlertLong,shelterDisplay,shelterGP
-,0,47,9,"0",46,,0,0,4,0,,,,,,,,,,,,,,,,,,,,,,,,,"Join us on race day!",0,41.913,41.913,0,0
+,0,47,9,"0",46,,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,"Join us on race day!",0,41.913,41.913,0,0

@@ -90,7 +90,7 @@ for minute in range(0,251,minuteInterval):
 	
 
 		
-file = open("../data/DensitiesGETMILES.csv",'w');
+file = open("../data/Densities.csv",'w');
 file2 = open("../data/RunnerData.csv",'w');	
 file.write(txt)
 file2.write(altTxt)

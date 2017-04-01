@@ -69,7 +69,7 @@ function generateLines() {
             }
             
             if (roadsClosed[i] != 1){
-           	   switch (Math.floor(runners / 2000)) {
+           	   switch (Math.floor(runners / 1500)) {
                   case 0:
                       break;
                   case 1:
