@@ -111,7 +111,7 @@ if(!isset($_SESSION['login_user'])){
         <h5 style="text-align: center">Note: Our system is optimized for the 1080 x 1920 and 1920 x 1080 display screens in Forward Command - not for mobile!</h5>
         
         <div style="width:80%; margin: 40px auto;">
-        <img src="img/3.png" style="width: 100%; margin: 0 auto"></img>
+        <img src="img/shamrock_screenshot.png" style="width: 100%; margin: 0 auto"></img>
         </div>
                     
         <ul class="inst-list" style="margin-right: 10%; margin-left:5%">
@@ -119,9 +119,9 @@ if(!isset($_SESSION['login_user'])){
             <br>
             <li><span style="font-weight: bold">Top Bar</span>: The color of the top bar reflects the current event alert status level 
             (e.g. if the top bar is green, the alert level is green)</li>
-            <li><span style="font-weight: bold">Logos</span>: Click on the BACCM logo to redirect back to the main menu, 
+            <li><span style="font-weight: bold">Logos</span>: Click on the BACSS logo to redirect back to the main menu, 
             and clicking on the Northwestern logo directs to the Northwestern Industrial Engineering homepage</li>
-            <li><span style="font-weight: bold">Weather</span>: The top bar will display the Wet Bulb Globe Temperature, updated hourly</li>
+            <li><span style="font-weight: bold">Weather</span>: The weather section will display the Wet Bulb Globe Temperature, updated hourly</li>
             <li><span style="font-weight: bold">Clock</span>: Current time and the race gun time, both updated in real-time</li>
             <li><span style="font-weight: bold">Alert Bar</span>: The white message bar displays race-related messages and general notifications as the race progresses 
             (e.g. “All corrals have started”, “The lead runner has crossed the finish line”). 
@@ -140,18 +140,15 @@ if(!isset($_SESSION['login_user'])){
                     <li>Clicking on the colored segment will display the number of runners in that mile; 
                     the Runners Per Mile Graph also visualizes this information. </li>
                     <li>The key for the range of runners corresponding to each color 
-                    can be found in the legend on the bottom right.</li>
+                    can be found in the legend on the right.</li>
+                    <li>Additionally, the purple teardrop-shaped symbols along the course represent 
+                    the mile markers along the course</li>
                 </ul></li>
                 <li><span style = "text-decoration: underline">Aid Station Markers</span>: 
                 <ul>
-                    <li>Each teardrop-shaped symbol represents an aid station along the course, 
+                    <li>Each green, yellow, or red teardrop-shaped symbol represents an aid station along the course, 
                     and its current bed occupancy level in relation to its total capacity. </li>
                     <li>Clicking on the markers will display the current number of patients at the aid station</li>
-                </ul></li>
-                <li><span style = "text-decoration: underline">"Red Plusses"/Medical Symbols</span>: 
-                <ul>
-                    <li>Each red square symbol represents a medical tent along the course route </li>
-                    <li>Current bed occupancy in each medical tent is shown in the medical tents graph to the right of the map</li>
                 </ul></li>
                 <li><span style = "text-decoration: underline">GPS Trackers</span>: 
                 <ul>
@@ -163,15 +160,10 @@ if(!isset($_SESSION['login_user'])){
                         <li><span style="font-style: italic">LM</span>: Lead Male Runner</li>
                         <li><span style="font-style: italic">LW</span>: Lead Female Runner</li>
                         <li><span style="font-style: italic">T</span>:  Final Runner</li>
-                        <li><span style="font-style: italic">LMW</span>: Lead Male Wheelchair</li>
-                        <li><span style="font-style: italic">LFW</span>: Lead Female Wheelchair</li>
-                        <li><span style="font-style: italic">FW</span>: Final Wheelchair</li>
-                        <li><span style="font-style: italic">3:50</span>: 3:50 Pacer</li>
-                        <li><span style="font-style: italic">3:55</span>: 3:55 Pacer</li>
-                        <li><span style="font-style: italic">4:20</span>: 4:20 Pacer</li>
-                        <li><span style="font-style: italic">4:25</span>: 4:25 Pacer</li>
-                        <li><span style="font-style: italic">5:00</span>: 5:00 Pacer</li>
-                        <li><span style="font-style: italic">5:10</span>: 5:10 Pacer</li>
+                        <li><span style="font-style: italic">LWh</span>: Lead Wheelchair</li>
+                        <li><span style="font-style: italic">FWh</span>: Final Wheelchair</li>
+                        <li><span style="font-style: italic">LWk</span>: Lead Walker</li>
+                        <li><span style="font-style: italic">FWk</span>: Final Walker</li>
                     </ul></li>
                     </ul></li>
                 </ul></li>
@@ -189,43 +181,10 @@ if(!isset($_SESSION['login_user'])){
                     and the exact number of patients currently checked in.</li>
                 </ul></li>
                 <br>
-                <li><span style="font-weight: bold">Runners Per Mile Graph</span>: 
-                <ul>
-                    <li>The two line graphs visualize where the runners are along the course. 
-                    The values correspond to the colored segments on the course map 
-                    (which reflect runner density for each mile). 
-                    The blue line represents the current runner density by mile, 
-                    based on our race simulation which incorporates the 5K counts received every 10 minutes 
-                    from the timing mats. The red line represents our simulated representation 
-                    of the distribution of runners along the course 30 minutes from the now. 
-                    Hovering over the lines will show a popup displaying the minute of the race 
-                    (either the current minute or the current minute + 30), the mile number, 
-                    and the simulated number of runners in that mile segment. 
-                    This information is also shown when clicking on a colored mile segment 
-                    along the course map on the lefthand side.</li>
-                </ul></li>
-                <br>
-                <li><span style="font-weight: bold">Medical Check-In</span>: 
-                <ul>
-                    <li><span style = "text-decoration: underline">Volunteer Staffing</span>: 
+                <li><span style = "font-weight: bold">Stress Level</span>: 
                     <ul>
-                        <li>A new feature for the 2016 marathon, the “Medical Check In” section contains
-                        information regarding the medical professional staffing at each aid station, 
-                        updated every 30 minutes. The grid representation shows the corresponding station level 
-                        for each type of medical professional at any given aid station. 
-                        The grid boxes are colored according to how well-staffed the station is 
-                        (e.g. green meaning fully staffed, red meaning significantly understaffed), 
-                        with respect to the targeted level for the given station. 
-                        This visualization communicates which aid stations are lacking in manpower at a glance.  
-                        Hovering over each box will display the exact number of the respective professional 
-                        at the aid station. (E.g. Hovering over the box for ‘Attending’ in the first column will show 
-                        the number of Attending Physicians at Aid Station 1).</li>
-                    </ul></li>
-                    <li><span style = "text-decoration: underline">Stress Level</span>: 
-                    <ul>
-                        <li>The last row of the medical check in section displays the stress level at each aid station. 
-                        The stress levels are updated every 30 minutes, and take into patient load, staffing and supplies. 
-                        Hovering over each box will display the exact stress level of the aid station.</li>
+                        <li>The last row of the aid station section displays stress levels. 
+                        The stress levels are updated every 15 minutes, and take into account patient load, staffing and supplies. </li>
                         <ul>
                         <li>Stress Level 1 - No stress (<span style= "color:green">Green</span>): 
                             Handling patient load, plenty of available beds; plenty of staff; plenty of supplies.</li>
@@ -244,11 +203,10 @@ if(!isset($_SESSION['login_user'])){
                             Too many patients, no available beds and patients crowding street; not enough staff, no support (no ambulance); some supplies depleted.</li>
                         </ul>
                     </ul></li>
-                </ul></li>
+                <br>
         </ul>
         
                 <div style="width:80%; margin: 40px auto;">
-        <img src="img/IMG_3361.JPG" style="width: 100%; margin: 0 auto"></img>
         </div>
         
 </body>

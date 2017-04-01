@@ -126,10 +126,12 @@ if ($_SESSION['start'] + (10*60*60) < time()) {
 						<div id="runners_box">
 							<div id="runners_box_left">
 								<p>Started: <span id='RunnersStarted'>&nbsp</span> </p>
-								<p>Dropped: <span id='RunnersDropped'>&nbsp</span> </p>
+								<!--<p><span id='RunnersDropped'>&nbsp</span> </p>-->
 							</div>
 							<div id="runners_box_right">
 				        		<p>Finished: <span id='RunnersFinished'>&nbsp</span></p>
+				        	</div>
+				        	<div id="runners_box_center">
 				        		<p>On Course: <span id='RunnersOnCourse'>&nbsp</span></p>
 				        	</div>
 						</div>
@@ -192,7 +194,9 @@ if ($_SESSION['start'] + (10*60*60) < time()) {
 					   
 					<div class="module" id="mod3">
 						<h4> Aid Stations </h4>
-							<div class="aidStations" id="aidStations">Occupancy</div>
+							<div class="aidStations" id="aidStations">
+								Occupancy
+							</div>
 							<div id="stress-chart">Stress</div>
 						<script src = "js/stress.js" type = "text/javascript"></script>
 					</div>
@@ -222,27 +226,31 @@ if ($_SESSION['start'] + (10*60*60) < time()) {
 
 		//First is FC, Second is Desktop
 
-                if (window.innerWidth < window.innerHeight){
-                        document.getElementById('map').style.width = '48%';
-                        document.getElementById('sidebar').style.width = '52%';
-                        document.getElementById('col1').style.width = '100%';
-                        document.getElementById('col2').style.width = '100%';
-                        document.getElementById('col1').style.height = '50%';
-                        document.getElementById('col2').style.height = '50%';
-                        document.getElementById('MarathonName').style.width= '400px';
-                        document.getElementById('MarathonName').style.backgroundSize =  '80%';
-                        document.getElementById('NUlogo').style.display = 'none';
-                        document.getElementById('raceTime').style.fontSize = '240%';
-                        document.getElementById('clockTime').style.fontSize = '240%';
-                        document.getElementById('alertText').style.fontSize = '170%';
-                        document.getElementById('info').style.fontSize = '190%';
-                        document.getElementById('runners_box').style.width = '65%';
-                        document.getElementById('map_legend').style.right = '340';
-                        document.getElementById('map_legend').style.bottom = '-70';
+                if (window.innerWidth > 1500){
+						document.getElementById('map').style.width = '33%';
+						document.getElementById('sidebar').style.width = '66%';
+						document.getElementById('col1').style.width = '49.5%';
+						document.getElementById('col2').style.width = '49.5%';
+						document.getElementById('col1').style.height = '100%';
+						document.getElementById('col2').style.height = '100%';
+						document.getElementById('MarathonName').style.width= '20%';
+						document.getElementById('MarathonName').style.backgroundSize = '100%';
+						document.getElementById('NUlogo').style.display = 'inline-block';
+						document.getElementById('raceTime').style.fontSize = '200%';
+						document.getElementById('clockTime').style.fontSize = '200%';
+						document.getElementById('alertText').style.fontSize = '150%';
+						document.getElementById('info').style.fontSize = '1.7em';
+						document.getElementById('runners_box').style.width = '100%';
+						document.getElementById('runners_box').style.height = '60%';
+						document.getElementById('runners_box').style.fontSize = '1.3em';
+						document.getElementById('runners_box_center').style.fontSize = '1.4em';
+						document.getElementById('weather').style.fontSize = '1.5em';
+				        document.getElementById('map_legend').style.bottom = '170';
+				        document.getElementById('map_legend').style.fontSize = '1.1em';
                         setTimeout(function(){
-                                                        var text = document.getElementsByTagName("text");
+                          var text = document.getElementsByTagName("text");
                         for (var i=0; i<text.length; i++){
-                                text[i].style.fontSize = '2.4vw';
+                                text[i].style.fontSize = '1.15vw';
                         }
 
 
@@ -260,10 +268,13 @@ if ($_SESSION['start'] + (10*60*60) < time()) {
 			document.getElementById('NUlogo').style.display = 'inline-block';
 			document.getElementById('raceTime').style.fontSize = '150%';
 			document.getElementById('clockTime').style.fontSize = '150%';
-			document.getElementById('alertText').style.fontSize = '100%';
+			document.getElementById('alertText').style.fontSize = '120%';
 			document.getElementById('info').style.fontSize = '100%';
 			document.getElementById('runners_box').style.width = '100%';
 			document.getElementById('runners_box').style.height = '60%';
+			document.getElementById('runners_box').style.fontSize = '1.1em';
+			document.getElementById('runners_box_center').style.fontSize = '1.1em';
+			document.getElementById('weather').style.fontSize = '1.3em';
 	        document.getElementById('map_legend').style.bottom = '140';
 			setTimeout(function(){
 							var text = document.getElementsByTagName("text");

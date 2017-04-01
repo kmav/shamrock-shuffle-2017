@@ -58,10 +58,13 @@ var margin = { top: 0, right: 0, bottom: 0, left:0 },
               })
               .attr("y", function(d,i) { 
                 if (i==0){
-                  return 25;
+                  return height*0.12;
+                }
+                else if (i==1){
+                  return height*0.38;
                 }
                 else{
-                  return 65;
+                  return 100000;
                 }
               })
               .attr("rx", 10)
@@ -88,15 +91,18 @@ var margin = { top: 0, right: 0, bottom: 0, left:0 },
               return (d.stress); 
             })
               .attr("x", function(d, i) {
-                  return 23;
+                  return width*0.3;
                 })
               .attr("y", function(d,i) { 
                   if (i==0){
-                    return 47;
+                    return height*0.25;
+                  }
+                  else if (i==1){
+                    return height*0.50;
                   }
                   else{
-                    return 87;
-                  }; 
+                    return 10000000;
+                  }
               })
             .style("text-anchor", "middle")
             .style("font-size" , "15")

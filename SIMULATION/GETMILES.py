@@ -7,9 +7,9 @@ import math
 import sys
 ### mysql connection
 
-groupedNumber = 40
+groupedNumber = 10
 minuteInterval=2
-con = mdb.connect(host='localhost',user='root',passwd='mar@1h0niem5', db='shamrock2017')
+con = mdb.connect(host='localhost',user='rsquared11',db='shamrock2017')
 #con = mdb.connect(host='localhost',user='mazhang',db='c9')
 cur = con.cursor(mdb.cursors.DictCursor)
 
@@ -29,7 +29,7 @@ txt = "raceMinute,started,atMile0,atMile1,atMile2,atMile3,atMile4,atMile5,atMile
 altTxt = "Mile,Minute,Runners\n"
 altTxtH = "Mile,Minute,Runners\n"
 
-for minute in range(0,501,minuteInterval):
+for minute in range(0,251,minuteInterval):
 	sql = "SELECT * FROM MarathonRunners where minute="+str(minute)
 	print sql
 	

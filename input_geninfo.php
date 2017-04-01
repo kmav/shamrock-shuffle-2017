@@ -336,7 +336,6 @@ if(!isset($_SESSION['login_user'])){
         document.getElementById("onCourse").value = OnCourse;
         document.getElementById("started").value = started;
         document.getElementById("finished").value = finished;
-
         document.getElementById("transports").value = transports;
 
     }

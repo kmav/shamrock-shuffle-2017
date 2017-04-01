@@ -7,8 +7,8 @@ var AidStations = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 var timeMultiplier = 1;
 var yScaleBoth = 0;
 
-var SetHour = 13;
-var SetMinute = 0;
+var SetHour = 11;
+var SetMinute = 30;
 var SetSecond = 0;
 
 
@@ -681,12 +681,8 @@ function updatePage(){
 		updateGeneral();
 	}
 	
-	if (window.location.pathname=="/desktop.php"){
-		var RefreshTime = 10000;
-	}
-	else{
-		var RefreshTime = 20000;
-	}
+	RefreshTime = 20;
+	
 	if (PageRefresh==RefreshTime){
 		window.location.reload(1);
 		PageRefresh=0;

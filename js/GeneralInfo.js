@@ -69,24 +69,26 @@ function getRunners(data){
     }*/
 
 	console.log(finished_sim);
-
-	var started = started_sim;
-	var finishers = finished_sim;
+    
+    var true_start = 23156;
+    var factor = true_start / started_sim;
+	var started = Math.round(started_sim * factor);
+	var finishers = Math.round(finished_sim * factor);
 	//drops = 924;
     
     // 2017: need to update with new drops function
     //drops = Math.round(drops);
-    drops = d3.select("#RunnersDropped").text();
+    // drops = d3.select("#RunnersDropped").text();
     
-    onCourse_sim = started - drops - finishers;
+    onCourse_sim = started - finishers; //IF ADDING DROPS BACK IN, be sure the update this equation
     
     d3.select("#RunnersStarted")
-    .text(started_sim);
+    .text(started);
     
     //d3.select("#RunnersDropped").text(drops);
     
     d3.select("#RunnersFinished")
-    .text(finished_sim);
+    .text(finishers);
     
     d3.select("#RunnersOnCourse")
     .text(onCourse_sim);
@@ -399,6 +401,6 @@ d3.csv("SIMULATION/Densities.csv",getRunners);
 d3.csv("data/gen_info.csv",displayInfo);
 
 // 2017 runner drop update
-d3.csv("SIMULATION/Densities.csv",displayDrops);
+//d3.csv("SIMULATION/Densities.csv",displayDrops);
 
 //may make new general info file with runners on course, runners finished, hospital transports, and patients seen

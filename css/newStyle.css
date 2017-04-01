@@ -102,7 +102,8 @@
 		.module{
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 			background: white;
-			margin: 5%;
+			margin: 5% 2.5%;
+			margin-right: 0%;
 		}
 
 		#medical{
@@ -498,29 +499,36 @@ h3{
 
 #runners_box{
 	margin-bottom: 3%;
-	line-height: 0.7;
+	line-height: 0.1;
 }
+
 
 #runners_box_left{
 	text-align: left;
 	float: left;
 	width: 30%;
-	height: 100%;
-	padding-left:10%;
+	padding-left: 10%;
 	padding-top: 1px;
 }
 
 #runners_box_right{
 	float: right;
-	width: 45%;
-	padding-left: 5%;
+	width: 35%;
 	padding-top: 1px;
+	padding-right: 8%;
+}
+
+#runners_box_center{
+	clear: both;
+	text-align: left;
+	margin-left: 30%;
 }
 
 #runners_box p{
 	font-family: Lato, Helvetica, sans-serif;
 	color:black;
 	font-size: 1em;
+	width: 120%;
 }
 
 #RunnersOnCourse{

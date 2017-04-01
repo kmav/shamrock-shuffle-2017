@@ -360,7 +360,7 @@ function runnerTracking(){
         "properties": {
           "icon": {
             "className": "my-icon icon-dc", // class name to style
-            "html": "LW", // add content inside the marker
+            "html": "LWh", // add content inside the marker
             "iconSize": null // size of icon, use null to set the size in CSS
           }
         }
@@ -390,7 +390,7 @@ function runnerTracking(){
         "properties": {
           "icon": {
             "className": "my-icon icon-sf", // class name to style
-            "html": "FW", // add content inside the marker
+            "html": "FWh", // add content inside the marker
             "iconSize": null // size of icon, use null to set the size in CSS
           }
         }
@@ -453,7 +453,7 @@ function runnerTracking(){
         "properties": {
           "icon": {
             "className": "my-icon icon-dc", // class name to style
-            "html": "WL", // add content inside the marker
+            "html": "LWk", // add content inside the marker
             "iconSize": null // size of icon, use null to set the size in CSS
           }
         }
@@ -468,7 +468,7 @@ function runnerTracking(){
         "properties": {
           "icon": {
             "className": "my-icon icon-dc", // class name to style
-            "html": "WE", // add content inside the marker
+            "html": "FWk", // add content inside the marker
             "iconSize": null // size of icon, use null to set the size in CSS
           }
         }
@@ -637,9 +637,9 @@ function plotMiles(){
 L.mapbox.accessToken = 'pk.eyJ1IjoiYnBleW5ldHRpIiwiYSI6IjNjMjQ0NTM4MTE0MmM0ODkwYTA0Mjg0NGYyZGM4MzM5In0.K96jFRdiKaEPadA1IxKoQw';
 
 //if index or normal: 
-if (window.innerWidth < window.innerHeight){
+if (window.innerWidth > 1900){
   var map = L.mapbox.map('map', 'bpeynetti.ed1c07fe')
-      .setView([41.9050, -87.653], 13); //OLD for both desktop/vertical is .setView([41.8955, -87.648], 13);
+      .setView([41.8795, -87.622], 15); //OLD for both desktop/vertical is .setView([41.8955, -87.648], 13);
   var size = "medium";
 }
 else {

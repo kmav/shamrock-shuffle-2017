@@ -92,7 +92,7 @@ def GenerateRunners(number_runners):
         corralNum = 0
         pct = 0
         #print percentage[corralNum]
-        while (float(percentage[corralNum]) < float(randNum) and corralNum<8):
+        while (float(percentage[corralNum]) < float(randNum) and corralNum<7):
             #decide which one to put by looping on increasing number of corrals
             corralNum+=1
             #print corralNum,
@@ -129,7 +129,7 @@ def GenerateRunners(number_runners):
     
 def main():
 
-    con = mdb.connect(host='localhost',user='rsquared11',db='shamrock2016')
+    con = mdb.connect(host='localhost',user='rsquared11',db='shamrock2017')
     cur = con.cursor()
 
     print "getting speed functions"
@@ -247,7 +247,7 @@ def main():
                     finish=1
                 else:
                     finish=0
-                sql = "INSERT into MarathonRunners (runnerId,minute,started,finished,corral,startTime,position,deviation,dropout,half) VALUES ("+str(runner.id)+','+str(minute)+','+str(start)+','+str(finish)+','+str(runner.corral)+','+str(runner.startTime)+','+str(runner.position)+','+str(runner.deviation)+','+str(runner.dropout)+",0);"
+                sql = "INSERT into MarathonRunners (runnerId,minute,started,finished,corral,startTime,position,deviation,dropout) VALUES ("+str(runner.id)+','+str(minute)+','+str(start)+','+str(finish)+','+str(runner.corral)+','+str(runner.startTime)+','+str(runner.position)+','+str(runner.deviation)+','+str(runner.dropout)+");"
                 # print sql
                 cur.execute(sql)
                 operations+=1
@@ -303,7 +303,7 @@ def main():
     print totalDropped
         
 
-ratio_grouped = 1
+ratio_grouped = 10
 minuteInterval = 2
 currentTemp = 60
 if __name__=='__main__':

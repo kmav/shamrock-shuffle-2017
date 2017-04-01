@@ -113,10 +113,10 @@ function drawAidStationTents(data){
 		})
 		.attr("y",function(d,i){
 			if (i==0){
-				return 45;
+				return h*0.4;
 			}
 			else{
-				return 90;
+				return h*0.75;
 			}
 		})
 		.attr("x",function(d){
