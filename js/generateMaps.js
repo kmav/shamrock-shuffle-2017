@@ -385,7 +385,7 @@ function runnerTracking(){
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [10+rows[0].longFW,rows[0].latFW]
+          "coordinates": [rows[0].longFW,rows[0].latFW]
         },
         "properties": {
           "icon": {
@@ -448,7 +448,7 @@ function runnerTracking(){
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [10+rows[0].long350,rows[0].lat350]
+          "coordinates": [rows[0].long350,rows[0].lat350]
         },
         "properties": {
           "icon": {
@@ -463,7 +463,7 @@ function runnerTracking(){
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [10+rows[0].long355,10+rows[0].lat355]
+          "coordinates": [rows[0].long355,rows[0].lat355]
         },
         "properties": {
           "icon": {

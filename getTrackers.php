@@ -117,14 +117,14 @@
         */
         
         //ID FOR TRACKERS
-        $leadM = 8880320538;
-        $leadF = 8880320542;
-        $turtle = 8880320544;
-        $leadWM = 8880320548; //LEAD WHEELCHAIR for shamrock 2017
+        $leadM = 8880125845;
+        $leadF = 8880320549;
+        $turtle = 8880320552;
+        $leadWM = 8880320573; //LEAD WHEELCHAIR for shamrock 2017
         $leadWF = 0;
-        $finalW = 8880320549;
-        $pace350 = 8880320552; //WALK LEAD for shamrock 2017
-        $pace355 = 8880320571; //WALK END for shamrock 2017
+        $finalW = 8880320574;
+        $pace350 = 8880320581; //WALK LEAD for shamrock 2017
+        $pace355 = 8880328566; //WALK END for shamrock 2017
         $pace425 = 0;
         $pace430 = 0;
         $pace500 = 0;
