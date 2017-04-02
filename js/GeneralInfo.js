@@ -70,10 +70,14 @@ function getRunners(data){
 
 	console.log(finished_sim);
     
-    var true_start = 23156;
+    var true_start = 23190;
     var factor = true_start / started_sim;
-	var started = Math.round(started_sim * factor);
-	var finishers = Math.round(finished_sim * factor);
+// 	var started = Math.round(started_sim * factor);
+// 	var finishers = Math.round(finished_sim * factor);
+	var started = 0;
+	var finishers = 0;
+
+
 	//drops = 924;
     
     // 2017: need to update with new drops function

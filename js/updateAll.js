@@ -7,7 +7,7 @@ var AidStations = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 var timeMultiplier = 1;
 var yScaleBoth = 0;
 
-var SetHour = 11;
+var SetHour = 8;
 var SetMinute = 30;
 var SetSecond = 0;
 
@@ -31,17 +31,17 @@ function getMinute() {
 		SetHour = currentTime.getHours();
 	}
 	
-	if (currentTime < startedTime){
-		SetHour = currentTime.getHours();
-	}
+	// if (currentTime < startedTime){
+	// 	SetHour = currentTime.getHours();
+	// }
 
 	var startedMs = startedTime.getTime();
 
 	//now calculate the millisecond difference from one to other
 	var elapsedTime = nowTime - startedMs;
-	if (elapsedTime<0) {
-	  elapsedTime = 0 - elapsedTime;
-	}
+	// if (elapsedTime<0) {
+	//   elapsedTime = 0 - elapsedTime;
+	// }
 	//1000 ms in a second, 60 seconds in a minute
 	var elapsedMinutes = parseInt(elapsedTime / 60000);
 	var elapsedMinutes = elapsedMinutes + elapsedMinutes%2;
